@@ -1,0 +1,24 @@
+<div id="jTweetsAnywhereEndlessScrollingSample">
+</div>
+
+<script type="text/javascript">
+$('#jTweetsAnywhereEndlessScrollingSample').jTweetsAnywhere({
+    username: '${username}',
+    count: ${count},
+    showTweetFeed: {
+        showProfileImages: true,
+        showUserScreenNames: true,
+        paging: {
+            mode: 'endless-scroll'
+        }
+    },
+    onDataRequestHandler: function(stats) {
+        if (stats.dataRequestCount < 11) {
+            return true;
+        }
+        else {
+            alert("${rate_warning}");
+        }
+    }
+});
+</script>

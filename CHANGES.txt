@@ -1,0 +1,7 @@
+kotti_jTweetAnywhere Changes
+============================
+
+0.1a1
+-----
+
+Inital release.
