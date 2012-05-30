@@ -1,0 +1,21 @@
+<script type="text/javascript">
+$('#tweets').jTweetsAnywhere({
+    username: '${username}',
+    count: ${count},
+    showTweetFeed: {
+        showProfileImages: true,
+        showUserScreenNames: true,
+        paging: {
+            mode: 'endless-scroll'
+        }
+    },
+    onDataRequestHandler: function(stats) {
+        if (stats.dataRequestCount < 11) {
+            return true;
+        }
+        else {
+            alert("${rate_warning}");
+        }
+    }
+});
+</script>
